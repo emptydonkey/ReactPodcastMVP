@@ -8,9 +8,9 @@ console.log('navbar')
     <nav className='navbar'>
       <div>
         <ul>
-          {menuItems.map(item =>{
+          {menuItems.map((item, i)=>{
             return (
-              <li>
+              <li key={i} >
                 <Link className={item.class} to={ item.url.replace(/\s/g, '') }>
                   {item.title}
                 </Link>

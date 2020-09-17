@@ -2,7 +2,7 @@ import React, {useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import Show from './Show.jsx';
 import { Route } from 'react-router-dom';
-import { PodcastContext } from './PodcastContext.jsx'
+import {PodcastContext} from './PodcastContext.jsx'
 
 export default function Home() {
   const [rendered, setRendered] = useState(false);
@@ -18,11 +18,11 @@ export default function Home() {
       })
   }, [])
 
-console.log('HOME', value )
+console.log('HOME', PodcastContext)
   return(!rendered) ? <h1>Loading</h1> :(
-    <div classname='feed'>
+    <div className='feed'>
       {pods.map(pod => (
-        <div classname='show'>
+        <div className='show'>
           <Show podcast={pod} />
         </div>
       ))}

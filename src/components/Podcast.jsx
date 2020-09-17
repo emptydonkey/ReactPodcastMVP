@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react';
-import { PodcastContext } from './PodcastContext.jsx';
+import {PodcastContext} from './PodcastContext.jsx';
 import Show from './Show.jsx';
 
 export default function Podcast({ match }) {
